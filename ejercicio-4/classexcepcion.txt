@@ -1,0 +1,22 @@
+# 1. Creamos nuestra propia excepción heredando de la clase base 'Exception'
+class NumeroNegativoError(Exception):
+    pass
+
+if __name__ == "__main__":
+    while True:
+        try:
+            valor = float(input("Seleccione un valor a convertir: "))
+            
+            if valor < 0:
+                # Lanzamos NUESTRA excepción
+                raise NumeroNegativoError()
+                
+            break 
+            
+        except ValueError:
+            # Este except SOLO ataja si escriben letras/texto
+            print("¡Error! Tenés que ingresar un dato numérico.")
+            
+        except NumeroNegativoError:
+            # Este except SOLO ataja si el número es negativo
+            print("¡Error! Esta calculadora no admite temperaturas negativas.")

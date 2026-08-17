@@ -1,0 +1,17 @@
+if __name__ == "__main__":
+    while True:
+        try:
+            valor = float(input("Seleccione un valor a convertir: "))
+            
+            # Validamos nuestra regla de negocio ANTES del break
+            if valor < 0:
+                # Forzamos la excepción con un mensaje a medida
+                raise ValueError("El valor no puede ser un número negativo.")
+                
+            break 
+            
+        except ValueError as e:
+            # Al imprimir 'e', mostramos el mensaje exacto que falló.
+            # Si escribieron "Hola", 'e' dirá algo como "could not convert string to float"
+            # Si escribieron "-5", 'e' dirá "El valor no puede ser un número negativo."
+            print(f"¡Error! {e} Intentá de nuevo.")

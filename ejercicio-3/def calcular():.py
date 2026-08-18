@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 pasaje = int(input("Costo pasaje: "))
 alojamiento = int(input("Costo alojamiento: "))
 noches = int(input("Cantidad de noches: "))

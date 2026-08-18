@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 if __name__ == "__main__":
     booleano = True
     while booleano:
@@ -25,7 +26,7 @@ if __name__ == "__main__":
                 raise ValueError("Te pasaste de intentos, a laburar esa memoria")
             
         except ValueError as e:
-            print(f"Error {e}")
+            print(f"{e}")
 
 
     
